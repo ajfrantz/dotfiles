@@ -61,11 +61,12 @@ set scrolloff=7
 set modeline
 set modelines=3
 
-"let g:projectCTagsAutogenerateTags=1
+" Use easytags.vim to generate project-specific tags files
+set tags=./tags;
+let g:easytags_dynamic_files = 1
 
 map <C-t> :FufBuffer<CR>
 map <F2>  :NERDTreeToggle<CR>
-map <F3>  :call GenerateProjectCTags("Standard", "--sort=1 --c++-kinds=+p --fields=+iaS --extra=+q")<CR>
 map <F4>  :TlistToggle<CR>
 
 "set makeprg=clear\ &&\ scons
